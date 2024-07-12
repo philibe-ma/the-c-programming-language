@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int power(int base, int n);
+
+/* test power function */
+int main()
+{
+    int i;
+
+    for (i = 1; i <= 10; ++i)
+    {
+        printf("%2d %4d %4d\n", i, power(2,i), power(-2,i));
+    }
+
+    return 0;
+}
+
+/* power: raise base to n-th power; n >= 0; v2.0 */
+int power(int base, int n)
+{
+    int p;
+
+    for (p = 1; n >= 1; --n)
+    {
+        p = p * base;
+    }
+    return p;
+}
